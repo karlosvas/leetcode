@@ -1,8 +1,8 @@
+#[allow(dead_code)]
+pub struct Solution;
+
 #[path = "easy/1_two_sum.rs"]
 pub mod one_two_sum;
-
-#[path = "easy/9_palindrome_number.rs"]
-pub mod palindrome_number;
 
 #[path = "easy/13_roman_to_Integer.rs"]
 pub mod thirteen_roman_to_integer;
@@ -49,8 +49,11 @@ pub mod eighty_three_remove_duplicates_list;
 #[path = "easy/88_merge_sorted_array.rs"]
 pub mod eighty_eight_merge_sorted_array;
 
-#[path = "easy/9-Palindrome Number.rs"]
+#[path = "easy/9_palindrome_number.rs"]
 pub mod nine_palindrome_number;
 
 #[path = "easy/94_binary_tree_inorder_traversal.rs"]
 pub mod ninety_four_binary_tree_inorder;
+
+#[path = "easy/100_same_tree.rs"]
+pub mod same_tree;
