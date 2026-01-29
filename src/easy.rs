@@ -57,3 +57,9 @@ pub mod ninety_four_binary_tree_inorder;
 
 #[path = "easy/100_same_tree.rs"]
 pub mod same_tree;
+
+#[path = "easy/101_symmetric_tree.rs"]
+pub mod symmetric_tree;
+
+#[path = "easy/102_maximum_depth_of_binary_tree.rs"]
+pub mod maximum_depth_of_binary_tree;
