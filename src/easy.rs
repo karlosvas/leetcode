@@ -61,5 +61,17 @@ pub mod same_tree;
 #[path = "easy/101_symmetric_tree.rs"]
 pub mod symmetric_tree;
 
-#[path = "easy/102_maximum_depth_of_binary_tree.rs"]
+#[path = "easy/104_maximum_depth_of_binary_tree.rs"]
 pub mod maximum_depth_of_binary_tree;
+
+#[path = "easy/110_balanced_binary_tree.rs"]
+pub mod balanced_binary_tree;
+
+#[path = "easy/108_convert_sorted_array_to_binary_search_tree.rs"]
+pub mod convert_sorted_array_to_binary_search_tree;
+
+#[path = "easy/111_minumum_depth_of_binary_tree.rs"]
+pub mod minumum_depth_of_binary_tree;
+
+#[path = "easy/112_path_sum.rs"]
+pub mod path_sum;
