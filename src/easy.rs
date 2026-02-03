@@ -78,3 +78,6 @@ pub mod path_sum;
 
 #[path = "easy/118_pascals_triangle.rs"]
 pub mod pascals_triangle;
+
+#[path = "easy/119_pascals_triangle_second.rs"]
+pub mod pascals_triangle_second;
