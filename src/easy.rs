@@ -75,3 +75,6 @@ pub mod minumum_depth_of_binary_tree;
 
 #[path = "easy/112_path_sum.rs"]
 pub mod path_sum;
+
+#[path = "easy/118_pascals_triangle.rs"]
+pub mod pascals_triangle;
