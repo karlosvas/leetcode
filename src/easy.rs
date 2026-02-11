@@ -81,3 +81,6 @@ pub mod pascals_triangle;
 
 #[path = "easy/119_pascals_triangle_second.rs"]
 pub mod pascals_triangle_second;
+
+#[path ="easy/121_best_time_to_buy_and_sell_stock.rs"]
+pub mod best_time_to_buy_and_sell_stock;
