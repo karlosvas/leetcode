@@ -90,3 +90,6 @@ pub mod valid_palindrome;
 
 #[path ="easy/136_single_number.rs"]
 pub mod single_number;
+
+#[path ="easy/144_binary_tree_preorder_traversal.rs"]
+pub mod binary_tree_preorder_traversal;
