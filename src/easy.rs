@@ -87,3 +87,6 @@ pub mod best_time_to_buy_and_sell_stock;
 
 #[path ="easy/125_valid_palindrome.rs"]
 pub mod valid_palindrome;
+
+#[path ="easy/136_single_number.rs"]
+pub mod single_number;
