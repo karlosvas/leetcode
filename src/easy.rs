@@ -93,3 +93,6 @@ pub mod single_number;
 
 #[path ="easy/144_binary_tree_preorder_traversal.rs"]
 pub mod binary_tree_preorder_traversal;
+
+#[path ="easy/145_binary_tree_postorder_traversal.rs"]
+pub mod binary_tree_postorder_traversal;
