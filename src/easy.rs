@@ -108,3 +108,6 @@ pub mod reverse_bits;
 
 #[path = "easy/191_number_of_one_bits.rs"]
 pub mod number_of_one_bits;
+
+#[path = "easy/202_happy_number.rs"]
+pub mod happy_number;
