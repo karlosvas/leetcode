@@ -99,3 +99,6 @@ pub mod binary_tree_postorder_traversal;
 
 #[path = "easy/168_excel_sheet_column_title.rs"]
 pub mod excel_sheet_column_title;
+
+#[path = "easy/171_excel_sheet_column_number.rs"]
+pub mod excel_sheet_column_number;
