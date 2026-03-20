@@ -1,3 +1,5 @@
+use crate::easy::Solution;
+
 impl Solution {
     pub fn reverse_bits(n: i32) -> i32 {
         i32::from_str_radix(&format!("{:032b}", n).chars().rev().collect::<String>(), 2).unwrap()

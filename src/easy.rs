@@ -105,3 +105,6 @@ pub mod excel_sheet_column_number;
 
 #[path = "easy/190_reverse_bits.rs"]
 pub mod reverse_bits;
+
+#[path = "easy/191_number_of_one_bits.rs"]
+pub mod number_of_one_bits;
