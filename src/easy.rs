@@ -102,3 +102,6 @@ pub mod excel_sheet_column_title;
 
 #[path = "easy/171_excel_sheet_column_number.rs"]
 pub mod excel_sheet_column_number;
+
+#[path = "easy/190_reverse_bits.rs"]
+pub mod reverse_bits;
