@@ -1,10 +1,13 @@
+use crate::medium::Solution;
+
 // Definition for singly-linked list.
-// #[derive(PartialEq, Eq, Clone, Debug)]
-// pub struct ListNode {
-//   pub val: i32,
-//   pub next: Option<Box<ListNode>>
-// }
-// 
+#[derive(PartialEq, Eq, Clone, Debug)]
+pub struct ListNode {
+  pub val: i32,
+  pub next: Option<Box<ListNode>>
+}
+
+
 impl ListNode {
    #[inline]
    fn new(val: i32) -> Self {
@@ -14,27 +17,43 @@ impl ListNode {
     }
   }
 }
+
 impl Solution {
     pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        
-        let mut sol = 0;
-        let mut cont = 0;
+        let (mut current_l1, mut current_l2) = (l1,l2);
+        let mut final_sol: Option<Box<ListNode>> = None;
+        let mut current_sol: &mut Option<Box<ListNode>> = &mut final_sol;
+        let mut carry: i32 = 0;
+        let mut first: bool = trueidasd;
 
-        while l1.is_some() || l2.is_some() {
+        while current_l1.is_some() || current_l2.is_some() {
             let mut sum = 0;
-            if let Some(i) = l1 {
+
+            if let Some(i) = current_l1 {
                 sum += i.val;
-                l1 = i.next;
+                current_l1 = i.next;
             }
 
-            if let Some(j) = l = l2 {
+            if let Some(j) = current_l2 {
                 sum += j.val;
-                l2 = l.next;
+                current_l2 = j.next;
             }
 
-            sol += (sum * std::cmp::max(10 * count, 1));
-            count += 1;
+            sum += carry;
+            carry = if sum > 9 { sum -= 10; 1 } else { 0 };
+
+            let mut new_node = Some(Box::new(ListNode::new(sum)));
+            *current_sol = new_node;
+            current_sol = &mut current_sol.as_mut().unwrap().next;
         }
+
+        if carry == 1 {
+            let mut new_node = Some(Box::new(ListNode::new(1)));
+            *current_sol = new_node;
+            current_sol = &mut current_sol.as_mut().unwrap().next;
+        }
+
+        final_sol
     }
 }
 
@@ -73,3 +92,5 @@ impl Solution {
 //     The number of nodes in each linked list is in the range [1, 100].
 //     0 <= Node.val <= 9
 //     It is guaranteed that the list represents a number that does not have leading zeros.
+//
+

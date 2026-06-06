@@ -111,6 +111,3 @@ pub mod number_of_one_bits;
 
 #[path = "easy/202_happy_number.rs"]
 pub mod happy_number;
-
-#[path = "medium/two_numbers.rs"]
-pub mod two_numbers;
