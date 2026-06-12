@@ -3,28 +3,26 @@ use crate::medium::Solution;
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
-  pub val: i32,
-  pub next: Option<Box<ListNode>>
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
 }
 
-
 impl ListNode {
-   #[inline]
-   fn new(val: i32) -> Self {
-     ListNode {
-       next: None,
-       val
+    #[inline]
+    fn new(val: i32) -> Self {
+        ListNode { next: None, val }
     }
-  }
 }
 
 impl Solution {
-    pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let (mut current_l1, mut current_l2) = (l1,l2);
+    pub fn add_two_numbers(
+        l1: Option<Box<ListNode>>,
+        l2: Option<Box<ListNode>>,
+    ) -> Option<Box<ListNode>> {
+        let (mut current_l1, mut current_l2) = (l1, l2);
         let mut final_sol: Option<Box<ListNode>> = None;
         let mut current_sol: &mut Option<Box<ListNode>> = &mut final_sol;
         let mut carry: i32 = 0;
-        let mut first: bool = trueidasd;
 
         while current_l1.is_some() || current_l2.is_some() {
             let mut sum = 0;
@@ -40,15 +38,20 @@ impl Solution {
             }
 
             sum += carry;
-            carry = if sum > 9 { sum -= 10; 1 } else { 0 };
+            carry = if sum > 9 {
+                sum -= 10;
+                1
+            } else {
+                0
+            };
 
-            let mut new_node = Some(Box::new(ListNode::new(sum)));
+            let new_node = Some(Box::new(ListNode::new(sum)));
             *current_sol = new_node;
             current_sol = &mut current_sol.as_mut().unwrap().next;
         }
 
         if carry == 1 {
-            let mut new_node = Some(Box::new(ListNode::new(1)));
+            let new_node = Some(Box::new(ListNode::new(1)));
             *current_sol = new_node;
             current_sol = &mut current_sol.as_mut().unwrap().next;
         }
@@ -93,4 +96,3 @@ impl Solution {
 //     0 <= Node.val <= 9
 //     It is guaranteed that the list represents a number that does not have leading zeros.
 //
-

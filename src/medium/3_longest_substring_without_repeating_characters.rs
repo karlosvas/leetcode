@@ -1,4 +1,5 @@
-use std::collections::{HashSet, HashMap};
+use crate::medium::Solution;
+use std::collections::{HashMap, HashSet};
 
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
@@ -10,12 +11,14 @@ impl Solution {
         for (i, c) in letters.iter().enumerate() {
             if char_appearances.contains_key(&c) {
                 let last_same_char = char_appearances.get(&c).unwrap();
-                if last_same_char+1 > l {
-                    l = last_same_char+1;
+                if last_same_char + 1 > l {
+                    l = last_same_char + 1;
                 }
-            } 
+            }
             char_appearances.insert(c.clone(), i);
-            if (i+1) - l > max_sol { max_sol = (i+1) - l; }
+            if (i + 1) - l > max_sol {
+                max_sol = (i + 1) - l;
+            }
         }
 
         max_sol as i32
