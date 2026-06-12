@@ -1,9 +1,10 @@
 use crate::easy::Solution;
 
 impl Solution {
-    pub fn is_palindrome(s: String) -> bool {
-        let iter = s.chars()
-            .filter(|c| c.is_alphanumeric()) 
+    pub fn is_string_palindrome(s: String) -> bool {
+        let iter = s
+            .chars()
+            .filter(|c| c.is_alphanumeric())
             .map(|c| c.to_ascii_lowercase());
         iter.clone().eq(iter.rev())
     }
@@ -34,8 +35,8 @@ impl Solution {
 // Output: true
 // Explanation: s is an empty string "" after removing non-alphanumeric characters.
 // Since an empty string reads the same forward and backward, it is a palindrome.
- 
 
 // Constraints:
 // 1 <= s.length <= 2 * 105
 // s consists only of printable ASCII characters.
+
