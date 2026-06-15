@@ -12,3 +12,9 @@ pub mod longest_palindromic_substring;
 
 #[path = "medium/6_zigzag_conversion.rs"]
 pub mod zigzag_conversion;
+
+#[path = "medium/7_reverse_integer.rs"]
+pub mod reverse_integer;
+
+#[path = "medium/8_string_to_integer_atoi.rs"]
+pub mod string_to_integer_atoi;
