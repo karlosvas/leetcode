@@ -66,7 +66,7 @@ mod tests {
 
     crate::check_case!(
         c1,
-        list_to_string(Solution::remove_elements(
+        list_to_string(&Solution::remove_elements(
             Some(Box::new(ListNode {
                 val: 1,
                 next: Some(Box::new(ListNode {
@@ -93,13 +93,13 @@ mod tests {
 
     crate::check_case!(
         c2,
-        list_to_string(Solution::remove_elements(None, 1)),
+        list_to_string(&Solution::remove_elements(None, 1)),
         "[]" | ""
     );
 
     crate::check_case!(
         c3,
-        list_to_string(Solution::remove_elements(
+        list_to_string(&Solution::remove_elements(
             Some(Box::new(ListNode {
                 val: 7,
                 next: Some(Box::new(ListNode {
