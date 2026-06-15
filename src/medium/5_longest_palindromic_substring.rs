@@ -45,7 +45,7 @@ impl Solution {
 // Constraints:
 // - 1 <= s.length <= 1000
 // - s consists of only digits and English letters.
-//
+
 #[cfg(test)]
 mod tests {
     use super::*;

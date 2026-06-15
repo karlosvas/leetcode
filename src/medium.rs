@@ -9,3 +9,6 @@ pub mod longest_substring_without_repeating_characters;
 
 #[path = "medium/5_longest_palindromic_substring.rs"]
 pub mod longest_palindromic_substring;
+
+#[path = "medium/6_zigzag_conversion.rs"]
+pub mod zigzag_conversion;
