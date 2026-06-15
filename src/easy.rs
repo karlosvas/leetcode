@@ -111,3 +111,6 @@ pub mod number_of_one_bits;
 
 #[path = "easy/202_happy_number.rs"]
 pub mod happy_number;
+
+#[path = "easy/203_remove_linked_list_elements.rs"]
+pub mod remove_linked_list_elements;

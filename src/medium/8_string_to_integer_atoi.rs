@@ -6,22 +6,7 @@ pub struct Solution;
 
 impl Solution {
     pub fn my_atoi(s: String) -> i32 {
-        use std::num::IntErrorKind;
-        let trimmed = s.trim_start();
-        let pos = trimmed
-            .bytes()
-            .enumerate()
-            .position(|(i, b)| !(b.is_ascii_digit() || (i == 0 && matches!(b, b'+' | b'-'))))
-            .unwrap_or(trimmed.len());
-
-        match trimmed[..pos].parse::<i64>() {
-            Ok(n) => n.clamp(i32::MIN as i64, i32::MAX as i64) as i32,
-            Err(e) => match e.kind() {
-                IntErrorKind::PosOverflow => i32::MAX,
-                IntErrorKind::NegOverflow => i32::MIN,
-                _ => 0,
-            },
-        }
+        todo!()
     }
 }
 
@@ -69,11 +54,7 @@ mod tests {
     crate::check_case!(c3, Solution::my_atoi("1337c0d3".to_string()), 1337);
     crate::check_case!(c4, Solution::my_atoi("0-1".to_string()), 0);
     crate::check_case!(c5, Solution::my_atoi("words and 987".to_string()), 0);
-    crate::check_case!(
-        c6,
-        Solution::my_atoi("-91283472332".to_string()),
-        -2147483648
-    );
+    crate::check_case!(c6, Solution::my_atoi("-91283472332".to_string()), -2147483648);
     crate::check_case!(c7, Solution::my_atoi("91283472332".to_string()), 2147483647);
     crate::check_case!(c8, Solution::my_atoi("".to_string()), 0);
     crate::check_case!(c9, Solution::my_atoi("   +0 123".to_string()), 0);
