@@ -112,8 +112,14 @@ pub mod number_of_one_bits;
 #[path = "easy/202_happy_number.rs"]
 pub mod happy_number;
 
+#[path = "easy/205_isomorphic_strings.rs"]
+pub mod isomorphic_strings;
+
 #[path = "easy/203_remove_linked_list_elements.rs"]
 pub mod remove_linked_list_elements;
 
-#[path = "easy/205_isomorphic_strings.rs"]
-pub mod isomorphic_strings;
+#[path = "easy/217_contains_duplicate.rs"]
+pub mod contains_duplicate;
+
+#[path = "easy/206_reverse_linked_list.rs"]
+pub mod reverse_linked_list;
