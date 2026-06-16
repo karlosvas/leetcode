@@ -123,3 +123,6 @@ pub mod contains_duplicate;
 
 #[path = "easy/206_reverse_linked_list.rs"]
 pub mod reverse_linked_list;
+
+#[path = "easy/219_contains_duplicate_two.rs"]
+pub mod contains_duplicate_two;
