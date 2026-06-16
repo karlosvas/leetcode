@@ -1,6 +1,9 @@
 pub mod easy;
 pub mod medium;
 
+use std::cell::RefCell;
+use std::rc::Rc;
+
 pub trait Matchable {
     type Target<'a>
     where
@@ -127,6 +130,41 @@ pub fn create_list<T: ListNew>(nums: &[i32]) -> Option<Box<T>> {
         head = Some(Box::new(T::list_new(num, head)));
     }
     head
+}
+
+pub trait TreeNodeNew: Sized {
+    fn tree_new(
+        val: i32,
+        left: Option<Rc<RefCell<Self>>>,
+        right: Option<Rc<RefCell<Self>>>,
+    ) -> Option<Rc<RefCell<Self>>>;
+}
+
+#[macro_export]
+macro_rules! impl_tree_node_new {
+    ($t:ty) => {
+        impl $crate::TreeNodeNew for $t {
+            fn tree_new(
+                val: i32,
+                left: Option<std::rc::Rc<std::cell::RefCell<Self>>>,
+                right: Option<std::rc::Rc<std::cell::RefCell<Self>>>,
+            ) -> Option<std::rc::Rc<std::cell::RefCell<Self>>> {
+                Some(std::rc::Rc::new(std::cell::RefCell::new(Self { val, left, right })))
+            }
+        }
+    };
+}
+
+pub fn tree_node<T: TreeNodeNew>(
+    val: i32,
+    left: Option<Rc<RefCell<T>>>,
+    right: Option<Rc<RefCell<T>>>,
+) -> Option<Rc<RefCell<T>>> {
+    T::tree_new(val, left, right)
+}
+
+pub fn tree_leaf<T: TreeNodeNew>(val: i32) -> Option<Rc<RefCell<T>>> {
+    T::tree_new(val, None, None)
 }
 
 #[macro_export]

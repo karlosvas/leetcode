@@ -126,3 +126,12 @@ pub mod reverse_linked_list;
 
 #[path = "easy/219_contains_duplicate_two.rs"]
 pub mod contains_duplicate_two;
+
+#[path = "easy/222_count_complete_tree_nodes.rs"]
+pub mod count_complete_tree_nodes;
+
+#[path = "easy/225_implement_stack_using_queues.rs"]
+pub mod implement_stack_using_queues;
+
+#[path = "easy/231_power_of_two.rs"]
+pub mod power_of_two;
