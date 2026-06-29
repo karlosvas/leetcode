@@ -135,3 +135,6 @@ pub mod implement_stack_using_queues;
 
 #[path = "easy/231_power_of_two.rs"]
 pub mod power_of_two;
+
+#[path = "easy/2016_maximum_difference_between_increasing_elements.rs"]
+pub mod maximum_difference_between_increasing_elements;
