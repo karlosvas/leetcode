@@ -141,3 +141,6 @@ pub mod maximum_difference_between_increasing_elements;
 
 #[path = "easy//1455_check_if_a_word_as_a_prefix_of_any_word_sentence.rs"]
 pub mod check_if_a_word_as_a_prefix_of_any_word_sentence;
+
+#[path = "easy/258_add_digits.rs"]
+pub mod add_digits;
