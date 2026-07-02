@@ -144,3 +144,9 @@ pub mod check_if_a_word_as_a_prefix_of_any_word_sentence;
 
 #[path = "easy/258_add_digits.rs"]
 pub mod add_digits;
+
+#[path = "easy/387_first_unique_character_in_a_string.rs"]
+pub mod first_unique_character_in_a_string;
+
+#[path = "easy/693_binary_number_with_alternating_bits.rs"]
+pub mod binary_number_with_alternating_bits;
