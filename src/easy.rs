@@ -150,3 +150,6 @@ pub mod first_unique_character_in_a_string;
 
 #[path = "easy/693_binary_number_with_alternating_bits.rs"]
 pub mod binary_number_with_alternating_bits;
+
+#[path = "easy/2765_longest_alternating_subarray.rs"]
+pub mod longest_alternating_subarray;
